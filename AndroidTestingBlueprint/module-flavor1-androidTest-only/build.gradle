@@ -12,6 +12,15 @@ android {
         testApplicationId 'com.example.android.testing.blueprint.test'
         // The Instrumentation test runner used to run tests.
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        jackOptions {
+            enabled true
+        }
+    }
+
+    compileOptions {
+        incremental true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     // Set the target app project. The module specified here should contain the production code

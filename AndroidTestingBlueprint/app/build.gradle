@@ -34,6 +34,10 @@ android {
         AndroidLibraryModuleIntegrationTest fail.
          */
         // testInstrumentationRunnerArgument "argument1", "make_test_fail"
+
+        jackOptions {
+            enabled true
+        }
     }
 
     buildTypes {
@@ -70,6 +74,13 @@ android {
             events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
         }
     }
+
+    compileOptions {
+        incremental true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
